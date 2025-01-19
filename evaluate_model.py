@@ -50,9 +50,7 @@ def evaluate_model(model_path, dataset_path):
     results_csv = 'runs/detect/train2/results.csv'
     try:
         results = pd.read_csv(results_csv)
-        metrics_to_plot = ['train/box_loss', 'train/cls_loss', 'train/dfl_loss', 
-                           'val/box_loss', 'metrics/precision(B)', 'metrics/recall(B)', 
-                           'metrics/mAP50(B)', 'metrics/mAP50-95(B)']
+        metrics_to_plot = ['train/box_loss', 'train/cls_loss', 'train/dfl_loss', 'val/box_loss', 'metrics/precision(B)', 'metrics/recall(B)', 'metrics/mAP50(B)', 'metrics/mAP50-95(B)']
         
         fig, axs = plt.subplots(4, 2, figsize=(20, 30))
         fig.suptitle('Training and Validation Metrics', fontsize=16)
@@ -66,6 +64,7 @@ def evaluate_model(model_path, dataset_path):
         
         plt.tight_layout()
         plt.savefig('training_metrics.png')
+        plt.close()
         print("Training metrics plot saved as training_metrics.png")
     except FileNotFoundError:
         print(f"Training results file not found at {results_csv}")
@@ -75,6 +74,6 @@ def evaluate_model(model_path, dataset_path):
     return metrics
 
 if __name__ == "__main__":
-    model_path = 'runs/detect/train2/weights/best.pt'  # Updated path to your newly trained model
+    model_path = 'runs/detect/train3/weights/best.pt'  # Updated path to your newly trained model
     dataset_path = 'datasets/combined_data.yaml'
     final_metrics = evaluate_model(model_path, dataset_path)
