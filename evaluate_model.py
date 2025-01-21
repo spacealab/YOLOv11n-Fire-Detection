@@ -74,6 +74,6 @@ def evaluate_model(model_path, dataset_path):
     return metrics
 
 if __name__ == "__main__":
-    model_path = 'runs/detect/train3/weights/best.pt'  # Updated path to your newly trained model
-    dataset_path = 'datasets/combined_data.yaml'
+    model_path = 'runs/detect/train4/weights/best.pt'  # Updated path to your newly trained model
+    dataset_path = 'datasets/Ziro/combined_data.yaml'
     final_metrics = evaluate_model(model_path, dataset_path)

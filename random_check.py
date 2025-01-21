@@ -3,15 +3,15 @@ import random
 from PIL import Image, ImageDraw, ImageFont
 
 # Path to the folders containing images and labels
-image_folder = 'datasets/Backup_Ziro/train/images'  # Path to the images folder
-label_folder = 'datasets/Backup_Ziro/train/labels'  # Path to the labels folder
+image_folder = 'datasets/One/test/images'  # Path to the images folder
+label_folder = 'datasets/One/test/labels'  # Path to the labels folder
 
 # List all images and labels
 images = sorted(os.listdir(image_folder))
 labels = sorted(os.listdir(label_folder))
 
 # Number of random samples to check
-num_samples = 50
+num_samples = 100
 
 # Randomly select 50 images and their corresponding labels
 random_samples = random.sample(list(zip(images, labels)), num_samples)

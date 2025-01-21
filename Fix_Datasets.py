@@ -3,8 +3,8 @@ import shutil
 from PIL import Image
 
 # Path to the folders containing images and labels
-image_folder = 'datasets/Backup_Ziro/valid/images'  # Path to the images folder
-label_folder = 'datasets/Backup_Ziro/valid/labels'  # Path to the labels folder
+image_folder = 'datasets/One/valid/images'  # Path to the images folder
+label_folder = 'datasets/One/valid/labels'  # Path to the labels folder
 
 # Output folders for problematic files
 output_image_folder = 'datasets/Backup_Ziro/valid/problematic_images'

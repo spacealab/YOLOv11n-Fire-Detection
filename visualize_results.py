@@ -70,8 +70,8 @@ if __name__ == "__main__":
     else:
         print(f"Warning: {conf_matrix_file} or {class_names_file} not found. Skipping confusion matrix plot.")
 
-    model_path = 'runs/detect/train3/weights/best.pt'
-    test_dir = 'datasets/test/images'
+    model_path = 'runs/detect/train4/weights/best.pt'
+    test_dir = 'datasets/Ziro/test/images'
     if os.path.exists(model_path) and os.path.exists(test_dir):
         visualize_predictions(model_path, test_dir)
     else:
