@@ -1,8 +1,11 @@
+import os
+import matplotlib
+matplotlib.use('Agg')  # Set the backend to Agg
+import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from ultralytics import YOLO
 import pickle
-import matplotlib.pyplot as plt
 import seaborn as sns
 
 def evaluate_model(model_path, dataset_path):
@@ -74,6 +77,6 @@ def evaluate_model(model_path, dataset_path):
     return metrics
 
 if __name__ == "__main__":
-    model_path = 'runs/detect/train4/weights/best.pt'  # Updated path to your newly trained model
+    model_path = 'runs/detect/train8/weights/best.pt'  # Updated path to your newly trained model
     dataset_path = 'datasets/Ziro/combined_data.yaml'
     final_metrics = evaluate_model(model_path, dataset_path)

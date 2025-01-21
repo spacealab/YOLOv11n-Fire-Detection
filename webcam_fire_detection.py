@@ -3,7 +3,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Load the trained model
-model = YOLO("runs/detect/train4/weights/best.pt")  # Path to the trained model
+model = YOLO("runs/detect/train8/weights/best.pt")  # Path to the trained model
 
 # Initialize the webcam
 cap = cv2.VideoCapture(0)  # 0 indicates the default webcam

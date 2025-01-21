@@ -8,8 +8,8 @@ model.train(
     data="datasets/Ziro/combined_data.yaml",  # Path to dataset configuration file
     epochs=100,  # Increase the number of epochs for better convergence
     imgsz=640,  # Image size
-    batch=16,  # Increase batch size for better generalization (if memory allows)
-    device="cuda",  # Use GPU for faster training (change to "cpu" if GPU is not available)
+    batch=8,  # Increase batch size for better generalization (if memory allows)
+    device="cpu",  # Use cuda for faster training (change to "cpu" if GPU is not available)
     lr0=0.01,  # Initial learning rate
     lrf=0.001,  # Final learning rate (with cosine annealing for smoother convergence)
     momentum=0.937,  # Momentum for optimizer
